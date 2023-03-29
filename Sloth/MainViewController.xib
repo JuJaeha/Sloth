@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Sloth" customModuleProvider="target">
+            <connections>
+                <outlet property="timerCountLabel" destination="0sE-Qi-TOm" id="aG8-nk-J9T"/>
+                <outlet property="timerResultLabel" destination="NuY-tw-7rt" id="gl9-P6-1Uf"/>
+                <outlet property="timerStartButton" destination="vfv-ZI-Ulv" id="GyA-ak-sgz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NuY-tw-7rt" userLabel="Timer Result Label">
+                    <rect key="frame" x="70" y="514.66666666666663" width="253" height="60.666666666666629"/>
+                    <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sE-Qi-TOm" userLabel="Timer Count Label">
+                    <rect key="frame" x="333" y="520" width="50" height="50"/>
+                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="0sE-Qi-TOm" secondAttribute="height" multiplier="1:1" id="FTo-V8-Ck0"/>
+                        <constraint firstAttribute="width" constant="50" id="l8h-nx-9cW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfv-ZI-Ulv" userLabel="Timer Start Button">
+                    <rect key="frame" x="157.33333333333334" y="675.33333333333337" width="78.333333333333343" height="42.666666666666629"/>
+                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="timerStartButtonAction:" destination="-1" eventType="touchUpInside" id="C3Z-ZF-Yix"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemYellowColor"/>
+            <constraints>
+                <constraint firstItem="vfv-ZI-Ulv" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1:5" id="3AO-5M-KbO"/>
+                <constraint firstItem="NuY-tw-7rt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="70" id="KfF-iK-sP6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vfv-ZI-Ulv" secondAttribute="bottom" constant="100" id="LiC-9Q-gnh"/>
+                <constraint firstItem="NuY-tw-7rt" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="7:100" constant="1" id="NBp-gL-hbp"/>
+                <constraint firstItem="0sE-Qi-TOm" firstAttribute="centerY" secondItem="NuY-tw-7rt" secondAttribute="centerY" id="WnE-CZ-vAc"/>
+                <constraint firstItem="vfv-ZI-Ulv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aHy-0E-Rht"/>
+                <constraint firstItem="NuY-tw-7rt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="apA-1V-PQk"/>
+                <constraint firstItem="vfv-ZI-Ulv" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1:20" id="cTx-VX-V6o"/>
+                <constraint firstItem="0sE-Qi-TOm" firstAttribute="leading" secondItem="NuY-tw-7rt" secondAttribute="trailing" constant="10" id="h4H-U0-XOR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0sE-Qi-TOm" secondAttribute="trailing" constant="10" id="o4k-JN-Nvf"/>
+                <constraint firstItem="vfv-ZI-Ulv" firstAttribute="top" secondItem="NuY-tw-7rt" secondAttribute="bottom" constant="100" id="r5o-vR-TBL"/>
+            </constraints>
+            <point key="canvasLocation" x="95" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
