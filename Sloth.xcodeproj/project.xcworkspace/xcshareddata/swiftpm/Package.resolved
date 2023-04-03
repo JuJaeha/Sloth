@@ -1,12 +1,21 @@
 {
   "pins" : [
     {
+      "identity" : "rxavfoundation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RxSwiftCommunity/RxAVFoundation.git",
+      "state" : {
+        "revision" : "028fc6535eace78cf641aa2e9fa0b8cd4340851f",
+        "version" : "0.1.3"
+      }
+    },
+    {
       "identity" : "rxswift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ReactiveX/RxSwift",
       "state" : {
-        "branch" : "main",
-        "revision" : "04c8d2b491b54e46a3534254bed8807b4a954fad"
+        "revision" : "cec68169a048a079f461ba203fe85636548d7a89",
+        "version" : "5.1.3"
       }
     }
   ],
