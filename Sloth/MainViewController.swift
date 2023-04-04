@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var timerStartButton: UIButton!
     @IBOutlet weak var timerCountLabel: UILabel!
     @IBOutlet weak var timerResultLabel: UILabel!
+    @IBOutlet weak var countProgressBar: CircularProgressBar!
     
     private var player: AVAudioPlayer?
     var timer: Timer?
@@ -38,8 +39,12 @@ class MainViewController: UIViewController {
     func initUI() {
         self.navigationController?.navigationBar.isHidden = true;
         timerResultLabel.text = "NuY-tw-7rt.Warming up.label".localized()
+        timerResultLabel.clipsToBounds = true
+        timerResultLabel.layer.cornerRadius = 4.0
         timerStartButton.setTitle("vfv-ZI-Ulv.Start.button".localized(), for: .normal)
+        timerStartButton.layer.cornerRadius = 4.0
         timerCountLabel.text = "\(timerNum)"
+        countProgressBar.value = 0.5 / 0.2
     }
     
     func setTimerCount() {
