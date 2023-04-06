@@ -12,7 +12,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let frame = UIScreen.main.bounds
-    var initialViewController: MainViewController?
     let nav = UINavigationController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -24,4 +23,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-

@@ -16,10 +16,10 @@ class MainViewController: UIViewController {
     @IBOutlet weak var countProgressBar: CircularProgressBar!
     
     private var player: AVAudioPlayer?
-    var timer: Timer?
+    var mTimer: Timer?
     var timerNum: Int = 0
     var exerciseNum: Int = 1
-    
+    var maxCount: Int = 60
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,35 +27,42 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func timerStartButtonAction(_ sender: UIButton) {
-        if timer != nil && timer!.isValid {
-            timer!.invalidate()
+        if let timer = mTimer {
+            if timer.isValid && mTimer != nil {
+                timer.invalidate()
+            } else {
+                mTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+                    self.setTimerCount()
+                }
+            }
         } else {
-            timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            mTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
                 self.setTimerCount()
             }
         }
     }
-
+    
     func initUI() {
         self.navigationController?.navigationBar.isHidden = true;
-        timerResultLabel.text = "NuY-tw-7rt.Warming up.label".localized()
+        timerResultLabel.text = LocalizedString.Main.warmingUp
         timerResultLabel.clipsToBounds = true
-        timerResultLabel.layer.cornerRadius = 4.0
-        timerStartButton.setTitle("vfv-ZI-Ulv.Start.button".localized(), for: .normal)
+        timerStartButton.setTitle(LocalizedString.Main.start, for: .normal)
         timerStartButton.layer.cornerRadius = 4.0
         timerCountLabel.text = "\(timerNum)"
-        countProgressBar.value = 0.5 / 0.2
+        countProgressBar.value = 0
     }
     
     func setTimerCount() {
         self.timerCountLabel.text = "\(timerNum)"
-        
         if timerNum < 10 {
-            timerResultLabel.text = "NuY-tw-7rt.Warming up.label".localized()
+            //워밍업
+            timerResultLabel.text = LocalizedString.Main.warmingUp
             stopSound()
         } else if timerNum >= 10 && timerNum <= 14 {
-            timerResultLabel.text = "NuY-tw-7rt.Start!.label".localized()
+            //시작
+            timerResultLabel.text = LocalizedString.Main.start
         } else {
+            // X개!
             if timerNum % 5 == 0 {
                 timerResultLabel.text = "\(exerciseNum)개!"
                 playSound()
@@ -66,13 +73,17 @@ class MainViewController: UIViewController {
         }
      
         if timerNum == 60 {
-            timer!.invalidate()
-            timer = nil
+            //끝
+            if let timer = mTimer {
+                timer.invalidate()
+                mTimer = nil
+            }
             timerNum = 0
             exerciseNum = 1
-            timerResultLabel.text = "NuY-tw-7rt.Finish!.label".localized()
+            timerResultLabel.text = LocalizedString.Main.finish
             stopSound()
         }
+        countProgressBar.value = Double(timerNum) / Double(maxCount/10)
         timerNum += 1
     }
     
@@ -95,10 +106,4 @@ class MainViewController: UIViewController {
     func stopSound() {
         player?.stop()
     }
-}
-
-extension String {
-    func localized(comment: String = "") -> String {
-           return NSLocalizedString(self, comment: comment)
-       }
 }

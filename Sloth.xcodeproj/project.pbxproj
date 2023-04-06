@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8B4B814F29D68F38002C2233 /* SoundHelix-Song-12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B4B814E29D68F38002C2233 /* SoundHelix-Song-12.mp3 */; };
 		8B4B815129D68F3E002C2233 /* SoundHelix-Song-6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B4B815029D68F3E002C2233 /* SoundHelix-Song-6.mp3 */; };
+		8B988B7729DEA3A600574500 /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B988B7629DEA3A600574500 /* LocalizedString.swift */; };
 		8BA0027A29DBEB4C000D8099 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA0027929DBEB4C000D8099 /* CircularProgressBar.swift */; };
 		8BC2EB0129BC74C300DF44B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC2EB0029BC74C300DF44B9 /* AppDelegate.swift */; };
 		8BC2EB0329BC74C300DF44B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC2EB0229BC74C300DF44B9 /* SceneDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		8B4B814E29D68F38002C2233 /* SoundHelix-Song-12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "SoundHelix-Song-12.mp3"; sourceTree = "<group>"; };
 		8B4B815029D68F3E002C2233 /* SoundHelix-Song-6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "SoundHelix-Song-6.mp3"; sourceTree = "<group>"; };
+		8B988B7629DEA3A600574500 /* LocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
 		8BA0027929DBEB4C000D8099 /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		8BC2EAFD29BC74C300DF44B9 /* Sloth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sloth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC2EB0029BC74C300DF44B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				8BCC3BFC29D4030100BB4C41 /* MainViewController.swift */,
 				8BCC3BFD29D4030100BB4C41 /* MainViewController.xib */,
 				8BA0027929DBEB4C000D8099 /* CircularProgressBar.swift */,
+				8B988B7629DEA3A600574500 /* LocalizedString.swift */,
 			);
 			path = Sloth;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				8BC2EB1829BC774600DF44B9 /* Coordinator.swift in Sources */,
 				8BC2EB0129BC74C300DF44B9 /* AppDelegate.swift in Sources */,
 				8BC2EB0329BC74C300DF44B9 /* SceneDelegate.swift in Sources */,
+				8B988B7729DEA3A600574500 /* LocalizedString.swift in Sources */,
 				8BC2EB1629BC765F00DF44B9 /* RootViewController.swift in Sources */,
 				8BCC3BFE29D4030100BB4C41 /* MainViewController.swift in Sources */,
 				8BA0027A29DBEB4C000D8099 /* CircularProgressBar.swift in Sources */,

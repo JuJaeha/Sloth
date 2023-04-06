@@ -54,19 +54,11 @@
                         <action selector="timerStartButtonAction:" destination="-1" eventType="touchUpInside" id="C3Z-ZF-Yix"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9w-aD-RoP">
-                    <rect key="frame" x="196.66666666666666" y="568" width="0.0" height="0.0"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="width" id="3ke-HH-fJ3"/>
-                        <constraint firstAttribute="height" id="ZAa-dA-164"/>
-                    </constraints>
-                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NuY-tw-7rt" userLabel="Timer Result Label">
-                    <rect key="frame" x="131" y="537.66666666666663" width="131" height="60.666666666666629"/>
+                    <rect key="frame" x="131" y="524.33333333333337" width="131" height="43.666666666666629"/>
                     <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </label>
             </subviews>
@@ -75,26 +67,19 @@
             <constraints>
                 <constraint firstItem="vfv-ZI-Ulv" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1:2" id="3AO-5M-KbO"/>
                 <constraint firstItem="NuY-tw-7rt" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1:3" id="3N8-fE-mPp"/>
+                <constraint firstItem="NuY-tw-7rt" firstAttribute="bottom" secondItem="u2q-uq-D1f" secondAttribute="bottom" id="4QQ-4S-GAJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vfv-ZI-Ulv" secondAttribute="bottom" constant="50" id="Dmt-4q-A5U"/>
                 <constraint firstItem="0sE-Qi-TOm" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="I98-t7-zA6"/>
                 <constraint firstItem="u2q-uq-D1f" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Lsm-Mi-1KN"/>
-                <constraint firstItem="NuY-tw-7rt" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="7:100" constant="1" id="NBp-gL-hbp"/>
-                <constraint firstItem="H9w-aD-RoP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UbF-vu-12G"/>
-                <constraint firstItem="H9w-aD-RoP" firstAttribute="top" secondItem="u2q-uq-D1f" secondAttribute="bottom" id="XD1-Zv-FJT"/>
+                <constraint firstItem="NuY-tw-7rt" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="5:100" constant="1" id="NBp-gL-hbp"/>
                 <constraint firstItem="vfv-ZI-Ulv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aHy-0E-Rht"/>
                 <constraint firstItem="NuY-tw-7rt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="apA-1V-PQk"/>
                 <constraint firstItem="vfv-ZI-Ulv" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1:20" id="cTx-VX-V6o"/>
                 <constraint firstItem="0sE-Qi-TOm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pTl-Yx-r3w"/>
                 <constraint firstItem="u2q-uq-D1f" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="z2F-CI-FsW"/>
-                <constraint firstItem="H9w-aD-RoP" firstAttribute="centerY" secondItem="NuY-tw-7rt" secondAttribute="centerY" id="zrM-jI-fYc"/>
             </constraints>
             <point key="canvasLocation" x="95" y="20"/>
         </view>
-        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" id="GWx-eK-F0c">
-            <rect key="frame" x="0.0" y="0.0" width="150" height="4"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <point key="canvasLocation" x="-18" y="370"/>
-        </progressView>
     </objects>
     <resources>
         <systemColor name="systemIndigoColor">
