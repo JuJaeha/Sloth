@@ -45,7 +45,6 @@ class MainViewController: UIViewController {
     func initUI() {
         self.navigationController?.navigationBar.isHidden = true;
         timerResultLabel.text = LocalizedString.Main.warmingUp
-        timerResultLabel.clipsToBounds = true
         timerStartButton.setTitle(LocalizedString.Main.start, for: .normal)
         timerStartButton.layer.cornerRadius = 4.0
         timerCountLabel.text = "\(timerNum)"

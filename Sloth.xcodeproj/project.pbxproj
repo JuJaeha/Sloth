@@ -15,8 +15,6 @@
 		8BC2EB0329BC74C300DF44B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC2EB0229BC74C300DF44B9 /* SceneDelegate.swift */; };
 		8BC2EB0A29BC74C500DF44B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BC2EB0929BC74C500DF44B9 /* Assets.xcassets */; };
 		8BC2EB0D29BC74C500DF44B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BC2EB0B29BC74C500DF44B9 /* LaunchScreen.storyboard */; };
-		8BC2EB1629BC765F00DF44B9 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC2EB1529BC765F00DF44B9 /* RootViewController.swift */; };
-		8BC2EB1829BC774600DF44B9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC2EB1729BC774600DF44B9 /* Coordinator.swift */; };
 		8BCC3BFE29D4030100BB4C41 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCC3BFC29D4030100BB4C41 /* MainViewController.swift */; };
 		8BCC3BFF29D4030100BB4C41 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BCC3BFD29D4030100BB4C41 /* MainViewController.xib */; };
 		8BCC3C0329D40FB000BB4C41 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BCC3C0529D40FB000BB4C41 /* Localizable.strings */; };
@@ -34,8 +32,6 @@
 		8BC2EB0929BC74C500DF44B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BC2EB0C29BC74C500DF44B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BC2EB0E29BC74C500DF44B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8BC2EB1529BC765F00DF44B9 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		8BC2EB1729BC774600DF44B9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8BCC3BFC29D4030100BB4C41 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8BCC3BFD29D4030100BB4C41 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		8BCC3C0429D40FB000BB4C41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -84,27 +80,17 @@
 			children = (
 				8B4B814929D686B0002C2233 /* AVPlayer */,
 				8BCC3C0529D40FB000BB4C41 /* Localizable.strings */,
-				8BC2EB1429BC761000DF44B9 /* ViewController */,
 				8BC2EB0029BC74C300DF44B9 /* AppDelegate.swift */,
 				8BC2EB0229BC74C300DF44B9 /* SceneDelegate.swift */,
 				8BC2EB0929BC74C500DF44B9 /* Assets.xcassets */,
 				8BC2EB0B29BC74C500DF44B9 /* LaunchScreen.storyboard */,
 				8BC2EB0E29BC74C500DF44B9 /* Info.plist */,
-				8BC2EB1729BC774600DF44B9 /* Coordinator.swift */,
 				8BCC3BFC29D4030100BB4C41 /* MainViewController.swift */,
 				8BCC3BFD29D4030100BB4C41 /* MainViewController.xib */,
 				8BA0027929DBEB4C000D8099 /* CircularProgressBar.swift */,
 				8B988B7629DEA3A600574500 /* LocalizedString.swift */,
 			);
 			path = Sloth;
-			sourceTree = "<group>";
-		};
-		8BC2EB1429BC761000DF44B9 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				8BC2EB1529BC765F00DF44B9 /* RootViewController.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,11 +174,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BC2EB1829BC774600DF44B9 /* Coordinator.swift in Sources */,
 				8BC2EB0129BC74C300DF44B9 /* AppDelegate.swift in Sources */,
 				8BC2EB0329BC74C300DF44B9 /* SceneDelegate.swift in Sources */,
 				8B988B7729DEA3A600574500 /* LocalizedString.swift in Sources */,
-				8BC2EB1629BC765F00DF44B9 /* RootViewController.swift in Sources */,
 				8BCC3BFE29D4030100BB4C41 /* MainViewController.swift in Sources */,
 				8BA0027A29DBEB4C000D8099 /* CircularProgressBar.swift in Sources */,
 			);
@@ -361,6 +345,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.memo.Sloth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -391,6 +378,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.memo.Sloth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
